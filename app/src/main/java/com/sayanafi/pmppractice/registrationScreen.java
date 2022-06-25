@@ -17,7 +17,7 @@ public class registrationScreen extends AppCompatActivity
     implements View.OnClickListener {
 
         EditText editName, editEmail, editAge, editDOB;
-        //Spinner editCity;
+        Spinner editCity;
         //RadioGroup gender;
         //RadioButton genderlist;
         Button btnSubmit;
@@ -28,11 +28,16 @@ public class registrationScreen extends AppCompatActivity
             getSupportActionBar().hide();
             setContentView(R.layout.activity_registration_scree);
 
+            Spinner city=findViewById(R.id.editCity);
+            ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(this, R.array.city, android.R.layout.simple_spinner_item);
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
+            city.setAdapter(adapter);
+
             editName = (EditText)findViewById(R.id.editName);
             editEmail = (EditText)findViewById(R.id.editEmail);
             editAge = (EditText)findViewById(R.id.editAge);
             editDOB = (EditText)findViewById(R.id.editDOB);
-            //editCity = findViewById(R.id.editCity);
+            editCity = findViewById(R.id.editCity);
             //gender = findViewById(R.id.editGender);
             btnSubmit = (Button) findViewById(R.id.btnSubmit);
 
@@ -48,7 +53,7 @@ public class registrationScreen extends AppCompatActivity
                 intent.putExtra("mail",editEmail.getText().toString());
                 intent.putExtra("age",editAge.getText().toString());
                 intent.putExtra("dob",editDOB.getText().toString());
-                //intent.putExtra("city", editCity.getSelectedItem().toString());
+                intent.putExtra("city", editCity.getSelectedItem().toString());
                 //intent.putExtra("gender",genderlist.getText().toString());
                 startActivity(intent);
                 finish();
