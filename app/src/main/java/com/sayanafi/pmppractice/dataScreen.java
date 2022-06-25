@@ -24,8 +24,8 @@ public class dataScreen extends AppCompatActivity {
         TextView tvEmail = (TextView)findViewById(R.id.mail);
         TextView tvAge = (TextView)findViewById(R.id.age);
         TextView tvDOB = (TextView)findViewById(R.id.dob);
-        TextView tvCity = (TextView)findViewById(R.id.city);
-        TextView tvGender = (TextView)findViewById(R.id.gender);
+        //TextView tvCity = (TextView)findViewById(R.id.city);
+        //TextView tvGender = (TextView)findViewById(R.id.gender);
 
         //get data
         Intent intent = getIntent(); //deklarasi global
@@ -35,16 +35,16 @@ public class dataScreen extends AppCompatActivity {
         String em = intent.getStringExtra("mail");
         String ag = intent.getStringExtra("age");
         String dob = intent.getStringExtra("dob");
-        String ct = intent.getStringExtra("city");
-        String gn = intent.getStringExtra("gender");
+        //String ct = intent.getStringExtra("city");
+        //String gn = intent.getStringExtra("gender");
 
         //set data ke textview
         tvNama.setText(nm);
         tvEmail.setText(em);
         tvAge.setText(ag);
         tvDOB.setText(dob);
-        tvCity.setText(ct);
-        tvGender.setText(gn);
+        //tvCity.setText(ct);
+        //tvGender.setText(gn);
     }
 
     public void onClick(View view) {
