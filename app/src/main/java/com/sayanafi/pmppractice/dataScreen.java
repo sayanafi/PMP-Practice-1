@@ -24,25 +24,8 @@ public class dataScreen extends AppCompatActivity {
         TextView tvEmail = (TextView)findViewById(R.id.mail);
         TextView tvAge = (TextView)findViewById(R.id.age);
         TextView tvDOB = (TextView)findViewById(R.id.dob);
-
-       /* final Spinner spn = (Spinner)findViewById(R.id.editCity);
-        RadioGroup rg = (RadioGroup)findViewById(R.id.editGender);
-        rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                //DEKLARASI RB
-                RadioButton rb1 =
-                        (RadioButton)findViewById(R.id.rbMale);
-                //cek
-                if (rb1.isChecked()){
-                    rg.makeText(getBaseContext(),
-                            "Male";
-                }else {
-                    rg.makeText(getBaseContext(),
-                            "Female";
-                }
-            }
-        });*/
+        TextView tvCity = (TextView)findViewById(R.id.city);
+        TextView tvGender = (TextView)findViewById(R.id.gender);
 
         //get data
         Intent intent = getIntent(); //deklarasi global
@@ -52,7 +35,7 @@ public class dataScreen extends AppCompatActivity {
         String em = intent.getStringExtra("mail");
         String ag = intent.getStringExtra("age");
         String dob = intent.getStringExtra("dob");
-        //String ct = spinner.getSelectedItem().toString("city");
+        String ct = intent.getStringExtra("city");
         String gn = intent.getStringExtra("gender");
 
         //set data ke textview
@@ -60,8 +43,8 @@ public class dataScreen extends AppCompatActivity {
         tvEmail.setText(em);
         tvAge.setText(ag);
         tvDOB.setText(dob);
-        //tvCity.setText(city);
-        //rg.setText(gn);
+        tvCity.setText(ct);
+        tvGender.setText(gn);
     }
 
     public void onClick(View view) {
