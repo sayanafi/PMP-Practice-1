@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">PMP Practice</string>
+    <string name="pmp">Pemrograman Mobile Pratama</string>
+    <string name="myname">Muhammad Nafi Udin</string>
+
+    <string name="task">Practice 1 - Pass Data</string>
+    <string name="regtitle">Registration Form</string>
+    <string name="datatitle">Data Saved</string>
+
+    <string name="submit">Submit</string>
+    <string name="exit">Exit</string>
+    <string name="back">Back</string>
+
+    <string-array name="city">
+        <item>Choose City</item>
+        <item>Surabaya</item>
+        <item>Sidoarjo</item>
+        <item>Gresik</item>
+        <item>Lamongan</item>
+        <item>Malang</item>
+        <item>Pasuruan</item>
+        <item>Jember</item>
+        <item>Bojonegoro</item>
+        <item>Madiun</item>
+        <item>Magetan</item>
+    </string-array>
+</resources>
